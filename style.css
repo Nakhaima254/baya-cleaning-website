@@ -7,10 +7,10 @@
         }
 
         :root {
-            --primary-green: #10B981;
-            --primary-blue: #3B82F6;
-            --dark-text: #1F2937;
-            --light-text: #6B7280;
+            --primary-green: #00ADEE;
+            --primary-blue: #86C441;
+            --dark-text: #13181f;
+            --light-text: #47494e;
             --background: #FFFFFF;
             --light-background: #F9FAFB;
             --border-color: #E5E7EB;
@@ -158,9 +158,9 @@
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-green);
+           width: 100px;
+            /* height: 80px; */
+            /* background-color: var(--primary-green); */
             color: white;
             border-radius: 8px;
             display: flex;
