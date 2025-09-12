@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Management - Baya Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container header-container">
+    
+                <div  class="logo-icon">
+                    <img src="images/Baya Cleaning-03.svg" alt="Logo">
+                </div>
+                <!-- <div class="logo-text">
+                    <h1>Baya Solutions</h1>
+                    <span>Smart • Wet • Dry Solution</span>
+                </div> -->
+            
+            
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                    <li><a href="reviews.html" class="nav-link active" data-page="reviews">Reviews</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-cta">
+                <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Reviews Hero Section -->
+    <section class="reviews-hero">
+        <div class="container">
+            <h1>Client Reviews</h1>
+            <p>See what our clients are saying about our services</p>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <div class="reviews-container">
+                <!-- Review Form -->
+                <div class="review-form">
+                    <h3>Share Your Experience</h3>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="reviewer-name">Your Name</label>
+                            <input type="text" id="reviewer-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewer-email">Your Email</label>
+                            <input type="email" id="reviewer-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-service">Service Received</label>
+                            <select id="review-service" required>
+                                <option value="">Select a service</option>
+                                <option value="sofa-cleaning">Sofa Cleaning</option>
+                                <option value="office-cleaning">Office Cleaning</option>
+                                <option value="carpet-cleaning">Carpet Cleaning</option>
+                                <option value="residential-cleaning">Residential Cleaning</option>
+                                <option value="fumigation">Fumigation</option>
+                                <option value="movers">Movers</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Your Rating</label>
+                            <div class="star-rating" id="star-rating">
+                                <i class="fas fa-star" data-rating="1"></i>
+                                <i class="fas fa-star" data-rating="2"></i>
+                                <i class="fas fa-star" data-rating="3"></i>
+                                <i class="fas fa-star" data-rating="4"></i>
+                                <i class="fas fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating-value" value="0" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-title">Review Title</label>
+                            <input type="text" id="review-title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-content">Your Review</label>
+                            <textarea id="review-content" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Upload Photos (Before & After)</label>
+                            <div class="image-upload">
+                                <div class="image-upload-item">
+                                    <div class="image-upload-placeholder" id="before-upload">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Before Photo</span>
+                                    </div>
+                                    <input type="file" id="before-photo" accept="image/*" style="display: none;">
+                                </div>
+                                <div class="image-upload-item">
+                                    <div class="image-upload-placeholder" id="after-upload">
+                                        <i class="fas fa-camera"></i>
+                                        <span>After Photo</span>
+                                    </div>
+                                    <input type="file" id="after-photo" accept="image/*" style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Review</button>
+                    </form>
+                </div>
+                
+                <!-- Reviews List -->
+                <div class="review-list">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah K." class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Sarah K.</h4>
+                                    <span class="review-date">January 15, 2023</span>
+                                </div>
+                            </div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <span class="review-service">Sofa Cleaning</span>
+                            <h3>Amazing results on my white sofa!</h3>
+                            <p>I was skeptical at first, but Baya Solutions completely transformed my white sofa that had been stained by my kids. The team was professional, arrived on time, and the results were beyond my expectations. Will definitely use them again!</p>
+                            <div class="review-images">
+                                <div class="review-image">
+                                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Before cleaning">
+                                    <div class="image-label">Before</div>
+                                </div>
+                                <div class="review-image">
+                                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="After cleaning">
+                                    <div class="image-label">After</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-helpful">
+                                <button class="helpful-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>Helpful (24)</span>
+                                </button>
+                            </div>
+                            <div class="review-actions">
+                                <a href="#"><i class="fas fa-share"></i> Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James M." class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>James M.</h4>
+                                    <span class="review-date">February 3, 2023</span>
+                                </div>
+                            </div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <span class="review-service">Office Cleaning</span>
+                            <h3>Professional and thorough office cleaning</h3>
+                            <p>Our office space was in desperate need of a deep clean, and Baya Solutions delivered exceptional results. They were careful with our equipment and furniture, and the place has never looked better. The team was efficient and courteous.</p>
+                            <div class="review-images">
+                                <div class="review-image">
+                                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Before cleaning">
+                                    <div class="image-label">Before</div>
+                                </div>
+                                <div class="review-image">
+                                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="After cleaning">
+                                    <div class="image-label">After</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-helpful">
+                                <button class="helpful-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>Helpful (18)</span>
+                                </button>
+                            </div>
+                            <div class="review-actions">
+                                <a href="#"><i class="fas fa-share"></i> Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Lucy W." class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Lucy W.</h4>
+                                    <span class="review-date">March 12, 2023</span>
+                                </div>
+                            </div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <span class="review-service">Carpet Cleaning</span>
+                            <h3>Unbelievable carpet transformation!</h3>
+                            <p>After years of kids and pets, our carpets were in terrible shape. I didn't think they could be saved, but Baya Solutions proved me wrong. They look brand new! The team was friendly, professional, and the pricing was very reasonable.</p>
+                            <div class="review-images">
+                                <div class="review-image">
+                                    <img src="https://images.unsplash.com/photo-1581548109906-29fa687e5cfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Before cleaning">
+                                    <div class="image-label">Before</div>
+                                </div>
+                                <div class="review-image">
+                                    <img src="https://images.unsplash.com/photo-1534885320675-4dfbcc786ec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="After cleaning">
+                                    <div class="image-label">After</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-helpful">
+                                <button class="helpful-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>Helpful (32)</span>
+                                </button>
+                            </div>
+                            <div class="review-actions">
+                                <a href="#"><i class="fas fa-share"></i> Share</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- FOOTER  -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <img src="images/Baya Cleaning-04.svg" alt="logo">
+                    </div>
+                    <h3>Baya Solutions Limited</h3>
+                    <p>Providing professional cleaning services in Nairobi with our smart, wet, and dry solutions. Serving both residential and commercial clients across Nairobi.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                       <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                        <li><a href="about.html" class="nav-link" data-page="about">About Us</a></li>
+                        <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                        <li><a href="reviews.html" class="nav-link" data-page="reviews">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#sofa-cleaning">Sofa Cleaning</a></li>
+                        <li><a href="#office-cleaning">Office Cleaning</a></li>
+                        <li><a href="#carpet-cleaning">Carpet Cleaning</a></li>
+                        <li><a href="#residential-cleaning">Residential Cleaning</a></li>
+                        <li><a href="#fumigation">Fumigation</a></li>
+                        <li><a href="#movers">Movers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +254 787 124 692</p>
+                    <p><i class="fas fa-phone"></i> +254 726 244 568</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Ruaka, Kenya</p>
+                    <p><i class="fas fa-envelope"></i> info@bayasolutions.co.ke</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/bayasolutions" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://tiktok.com/@bayasolutions" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://instagram.com/BaYaSolutionsLtd" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Baya Solutions Limited. All Rights Reserved. | Proudly serving Nairobi, Kenya</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254787124692?text=Hello%20Baya%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20cleaning%20services" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+<script src="script.js"></script>
+    
+</body>
+</html>
+   
